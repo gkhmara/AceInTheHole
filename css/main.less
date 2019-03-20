@@ -1,0 +1,873 @@
+/*
+File Name: main.less
+Date: 03/10/19
+Programmer: Greg Khmara
+*/
+
+/* color */
+@header_color: #FF0000;
+@shadow_color: #575757;
+@footer_color: #262626;
+@body_color: #fff;
+@body_text_color: #595959;
+@header_border: #999;
+@logo_color: #000;
+@text_color: #f2f2f2;
+@hover_color: #FF4D4D;
+@header_li_a_color: #333;
+@header_border_tablet: #999;
+@input_hover: #B30000;
+
+
+/**********************************
+GENERAL
+***********************************/
+
+//* {
+//    border: 1px solid white;
+//}
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    font-size: 16px;
+}
+
+main {
+    margin: 0 1em;
+    margin-bottom: 30px;
+}
+
+p {
+    margin: 1em 1em 1em 0;
+}
+
+h1 {
+    font-family: 'Changa One', sans-serif;
+    margin: 1em 1em 1em 0;
+    font-size: 1.5em;
+    text-shadow: 2px 2px @shadow_color;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+h2 {
+    margin: 1em 1em 1em 0;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 1em 1em 1em 0;
+    font-weight: bold;
+    font-size: 1.54em;
+    font-style: bold;
+    color: red;
+}
+
+#group {
+    text-decoration: underline;
+}
+
+
+#wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+.slideHide {
+    display: none;
+}
+
+.imageHide {
+    display: block;
+}
+
+.myImageContainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mySlidesContainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.formTitle {
+    margin: 0;
+    margin: 0;
+}
+
+/*** Weather Widget ***/
+
+.weatherSize {
+    width: 100%;
+}
+
+
+/**********************************
+FORM
+***********************************/
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: @header_color;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: @input_hover;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+
+}
+
+
+/**********************************
+HEADING
+***********************************/
+
+header {
+    float: left;
+    margin: -15px 0 30px 0;
+    padding: 5px 0 0 0;
+    width: 100%;
+}
+
+#logo {
+    text-align: center;
+    margin: 0;
+}
+
+
+h2 {
+    font-size: 0.75em;
+    margin: 1em 1em 1em 0;
+    font-weight: bold;
+}
+
+
+
+/**********************************
+NAVIGATION
+***********************************/
+
+nav {
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    font-weight: 800;
+    padding: 15px 10px;
+}
+
+
+/**********************************
+FOOTER
+***********************************/
+
+footer {
+    font-style: italic;
+    text-align: left;
+    width: 100%;
+    background-color: @footer_color;
+    padding: 50px 10px 10px 10px;
+}
+
+footer ul {
+    margin-top: 5px;
+    list-style: none;
+}
+
+
+
+/**********************************
+COLORS
+***********************************/
+
+/* site body */
+body {
+    background-color: @body_color;
+    color: @body_text_color;
+}
+
+header {
+    background: @header_color;
+    border-color: @header_border;
+}
+
+/* nav background on mobile */
+nav {
+    background: @header_color;
+}
+
+/* logo text */
+h1 {
+    color: @logo_color;
+}
+
+h2 {
+    color: @header_color;
+}
+
+/* links */
+a {
+    color: @header_border;
+}
+
+/* nav link */
+nav a,
+nav a:visited {
+    color: @body_color;
+}
+
+/* selected nav link */
+nav a.selected,
+nav a:hover {
+    color: @header_color;
+}
+
+/* footer links */
+.footer_menu {
+    color: red;
+}
+
+
+/**********************************
+SLIDESHOW
+***********************************/
+
+* {
+    box-sizing: border-box;
+}
+
+.mySlides {
+    display: none;
+}
+
+.w3-content w3-section {
+    align-content: center;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    /* BLOCKS THE NAV (position: relative;) */
+    margin: auto;
+}
+
+/* Caption text */
+.text {
+    color: @text_color;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/**********************************
+NAVIGATION
+***********************************/
+
+/* Based on http://kmturley.blogspot.com/2014/06/responsive-mobile-dropdown-navigation.html */
+/* Modified for mobile-first design */
+
+/* Set up menu */
+
+/* remove bullet in front of list items in menu */
+
+.header ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
+    overflow: hidden;
+}
+
+/* space between lines */
+
+.header li {
+    padding: 10px 0;
+}
+
+/* remove underline in links. */
+
+.header li a {
+    text-decoration: none;
+    color: @header_li_a_color;
+}
+
+.header li a:hover {
+    background-color: @hover_color;
+}
+
+/* space around each of the menu items */
+
+.header li a {
+    padding: 10px 30px;
+}
+
+/* clear float on line below */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+}
+
+/* menu icon for responsive hamburger menu */
+
+.header .menu-icon {
+    /* location of hamburger icon */
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header .menu-icon .navicon {
+    /* center line of hamburger icon */
+    background: @header_li_a_color;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+/* top and bottom lines of hamburger icon */
+.header .menu-icon .navicon:after {
+    background: @header_li_a_color;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* respond to click on hamburger menu icon */
+
+.header .menu-btn {
+    /* hide checkbox */
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+/* animations */
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/*  TABLET AND DESKTOP: CREATE HORIZONTAL NAVIGATION BAR AT 600 PX OR HIGHER */
+@media only screen and (min-width: 600px) {
+
+    /* Note: We float the entire menu to the right, so it is right-aligned. Then we float each list item to the left,
+so it sits to next to the next item. We have to clear the float in the intro section so the text won't wrap
+around the menu. You may find it helpful to change 'left' to 'right' to see what happens. */
+
+    .header .menu {
+        float: right;
+        margin: 0 0 10px 0;
+        max-height: none;
+    }
+
+    .header ul {
+        overflow: visible;
+        margin-bottom: 20px;
+    }
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 10px 10px;
+        font-size: 15px;
+    }
+
+    #intro {
+        clear: left;
+    }
+
+    /* hide the checkbox and label for it */
+
+    .header .menu-icon,
+    .menu-btn {
+        display: none;
+    }
+
+
+}
+
+
+/**********************************
+GRID
+***********************************/
+
+/* Adapted from: http://www.responsivegridsystem.com (media queries changed to mobile first) */
+
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.span_2_of_2,
+.span_1_of_2 {
+    width: 100%;
+}
+
+/* FOOTER */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container > section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /*    border: 1px solid red;*/
+}
+
+.item2 {
+    border: 1px solid red;
+}
+
+.social-icon {
+    max-width: 100px;
+}
+
+/* TABLET STYLES - GRID OF TWO */
+
+@media only screen and (min-width: 600px) {
+
+    .span_2_of_2 {
+        width: 100%;
+    }
+
+    .span_1_of_2 {
+        width: 49.2%;
+    }
+
+    .col {
+        margin: 1% 0 1% 1%;
+    }
+
+    .col:nth-child(3) {
+        margin-left: 0;
+    }
+
+}
+
+/* DESKTOP STYLES - GRID OF THREE */
+
+@media only screen and (min-width: 1025px) {
+
+    .col {
+        margin: 1% 0 1% 1.6%;
+    }
+
+    .span_3_of_3 {
+        width: 100%;
+    }
+
+    .span_2_of_3 {
+        width: 66.13%;
+    }
+
+    .span_1_of_3 {
+        width: 32.26%;
+    }
+
+    .col:nth-child(3) {
+        margin-left: 1%;
+    }
+
+
+
+}
+
+
+/**********************************
+RESPONSIVE
+***********************************/
+
+/** MOBILE STYLES **/
+@media screen and (min-width: 460px) {
+
+    /**********************************
+  SOCIAL FEEDS
+  ***********************************/
+
+    .social-icon {
+        width: 100%;
+    }
+
+    .grid-container > div {
+        width: 60%;
+        justify-content: center;
+    }
+
+    .footer_menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 2em;
+    }
+
+
+    .span_3_of_3 {
+        width: 100%;
+    }
+
+    .span_2_of_3 {
+        width: 100%;
+    }
+
+    .span_1_of_3 {
+        width: 100%;
+    }
+
+
+    /**********************************
+ FOOTER
+  ***********************************/
+
+    li a {
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+
+
+
+    /**********************************
+  SLIDESHOW
+  ***********************************/
+
+    .text {
+        font-size: 11px
+    }
+
+    .slideHide {
+        display: block;
+    }
+
+    .imageHide {
+        display: none;
+    }
+
+
+
+}
+
+
+
+/** TABLET STYLES **/
+@media screen and (min-width: 1025px) {
+
+    /**********************************
+  HEADER
+  ***********************************/
+
+    li {
+        display: inline-block;
+    }
+
+    li a {
+        display: block;
+        padding: 20px;
+        font-size: 15px;
+    }
+
+
+    nav {
+        background: none;
+        float: right;
+        font-size: 1.125em;
+        margin-right: 5%;
+        text-align: right;
+        width: 45%;
+    }
+
+    #logo {
+        float: left;
+        margin-left: 5%;
+        text-align: left;
+        width: 45%;
+        color: @logo_color;
+    }
+
+
+    h2 {
+        font-size: 0.825em;
+        margin-bottom: 20px;
+    }
+
+    header {
+        border-bottom: 5px solid @header_border_tablet;
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    main {
+        margin: 0 5em;
+    }
+
+    .span_3_of_3 {
+        width: 100%;
+    }
+
+    .span_2_of_3 {
+        width: 66.13%;
+    }
+
+    .span_1_of_3 {
+        width: 32.26%;
+    }
+
+
+    /**********************************
+IMAGES
+***********************************/
+
+    #rcorners {
+        border-radius: 15px;
+        background: url(../img/track.jpg);
+        background-position: center;
+        padding: 20px;
+        width: 400px;
+        height: 300px;
+        box-shadow: 10px 10px @header_border;
+    }
+
+    #rcorners1 {
+        border-radius: 15px;
+        background: url(../img/runner_side.jpg);
+        background-position: center;
+        padding: 20px;
+        width: 300px;
+        height: 400px;
+        box-shadow: 10px 10px @header_border;
+    }
+    
+        #rcorners2 {
+        border-radius: 15px;
+        background: url(../img/fun-kids.jpeg);
+        background-position: center;
+        padding: 20px;
+        width: 550px;
+        height: 250px;
+        box-shadow: 10px 10px @header_border;
+    }
+
+
+    /**********************************
+Footer
+***********************************/
+
+    li {
+        display: inline-block;
+    }
+
+    li a {
+        display: block;
+        padding: 20px;
+        font-size: 15px;
+    }
+
+}
+
+
+
+/** DESKTOP STYLES **/
+@media only screen and (min-width: 1270px) {
+
+    li {
+        display: inline-block;
+    }
+
+    li a {
+        display: block;
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .social-icon {
+        width: 100%;
+    }
+
+    main {
+        margin: 0 5em;
+        margin-bottom: 30px;
+    }
+
+
+
+    p {
+        margin: 1em 1em 1em 0;
+    }
+
+    h3 {
+        margin: 1em 1em 1em 0;
+        font-weight: bold;
+        font-size: 1.5em;
+        font-style: bold;
+    }
+
+    .span_3_of_3 {
+        width: 100%;
+    }
+
+    .span_2_of_3 {
+        width: 66.13%;
+    }
+
+    .span_1_of_3 {
+        width: 32.26%;
+    }
+
+}
